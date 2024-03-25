@@ -12,7 +12,6 @@ retirement_pipeline:
     {% if ECOMMERCE_HOST is defined %}- [ 'RETIRING_ECOMMERCE', 'ECOMMERCE_COMPLETE', 'ECOMMERCE', 'retire_learner' ]{% endif %}
     {% if DISCOVERY_HOST is defined %}- [ 'RETIRING_DISCOVERY', 'DISCOVERY_COMPLETE', 'DISCOVERY', 'replace_usernames' ]{% endif %}
     {% if NOTES_HOST is defined %}- [ 'RETIRING_NOTES', 'NOTES_COMPLETE', 'LMS', 'retirement_retire_notes' ]{% endif %}
-    - [ 'RETIRING_EMAIL_LISTS', 'EMAIL_LISTS_COMPLETE', 'LMS', 'retirement_retire_mailings' ]
     - [ 'RETIRING_ENROLLMENTS', 'ENROLLMENTS_COMPLETE', 'LMS', 'retirement_unenroll' ]
     - [ 'RETIRING_LMS_MISC', 'LMS_MISC_COMPLETE', 'LMS', 'retirement_lms_retire_misc' ]
     - [ 'RETIRING_LMS', 'LMS_COMPLETE', 'LMS', 'retirement_lms_retire' ]
